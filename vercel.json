@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
+  ],
+  "env": {
+    "PORT": "3000",
+    "IS_LIVE": "1",
+    "MONGO_URI": "@mongo_uri",
+    "CHAT_APP_URL": "@chat_app_url",
+    "SCRETE_KEY": "@secret_key"
+  }
+}
